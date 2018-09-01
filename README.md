@@ -1,7 +1,17 @@
 # Docker
 
 ## Instructions for Docker file
-* **.dockerignore**
+* **.dockerignore** - Before the docker CLI sends the context to the docker daemon, it looks for a file named .dockerignore in the root directory of the context. If this file exists, the CLI modifies the context to exclude files and directories that match patterns in it. This helps to avoid unnecessarily sending large or sensitive files and directories to the daemon and potentially adding them to images using ADD or COPY.
+```
+If a line in .dockerignore file starts with # in column 1, then this line is considered as a comment and is ignored before interpreted by the CLI.
+
+Here is an example .dockerignore file:
+
+# comment
+*/temp*
+*/*/temp*
+temp?
+```
 * **FROM** - Sets the Base Image for subsequent instructions.
 ```
 FROM ubuntu:15.04
