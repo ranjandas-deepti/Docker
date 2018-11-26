@@ -5,7 +5,7 @@
 # 
 # =============================================================================
 FROM centos:7.5.1804
-MAINTAINER "SOUMYA RANJAN ROUT" <soumyarout80@gmail.com>
+MAINTAINER "SOUMYA RANJAN ROUT" <srout01021989@gmail.com>
 ENV container docker
 
 # Update CentOs images as they do not recive any update as they intend to match installation iso contents.
